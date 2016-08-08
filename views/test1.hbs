@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("button").click(function(){
+      var url = "http://192.168.20.28:3000/users/99901"
+        $.get(url, function(data, status){
+            console.log("Data: " + data + "\nStatus: " + status);
+            // alert("Data: " + data + "\nStatus: " + status);
+            $("p").text(data.name)
+        });
+    });
+});
+</script>
+</head>
+<body>
+<h3>Name:</h3>
+  <p>
+
+  </p>
+
+<button>Click here for result</button>
+
+</body>
+</html>
